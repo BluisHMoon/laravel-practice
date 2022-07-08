@@ -30,7 +30,7 @@ class AppServiceProvider extends ServiceProvider
         // 取得資料
         View::composer(['blog', 'post'], function ($view) {
             $categories = Category::where('enabled', true)->orderBy('sort', 'asc')->withCount(['posts' => function(Builder $query) {
-                $query->where('status', 'pubilshed');
+                $query->where('status', 'published');
             }])->get();
             $view->with('categories', $categories);
         });

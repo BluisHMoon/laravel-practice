@@ -29,32 +29,27 @@
                     <article class="entry entry-single">
 
                         <div class="entry-img">
-                            <img src="{{ asset('assets/img/blog/blog-1.jpg') }}" alt="" class="img-fluid">
+                            <img src="{{ asset( $post->pic ) }}" alt="" class="img-fluid">
                         </div>
 
                         <h2 class="entry-title">
-                            <a href="blog-single.html">Dolorum optio tempore voluptas dignissimos cumque fuga qui
-                                quibusdam quia</a>
+                            <a href="{{ url('/blog/'. $post->id ) }}">{{ $post->title }}</a>
                         </h2>
 
                         <div class="entry-meta">
                             <ul>
                                 <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a
-                                        href="blog-single.html">John Doe</a></li>
+                                        href="{{ url('/blog/'. $post->id ) }}">John Doe</a></li>
                                 <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a
-                                        href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                                        href="{{ url('/blog/'. $post->id ) }}"><time datetime="{{ $post->created_at->toDateString() }}">{{ $post->created_at->toFormattedDateString() }}</time></a></li>
                                 <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a
-                                        href="blog-single.html">12 Comments</a></li>
+                                        href="{{ url('/blog/'. $post->id ) }}">12 Comments</a></li>
                             </ul>
                         </div>
 
                         <div class="entry-content">
                             <p>
-                                Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi
-                                praesentium. Aliquam et laboriosam eius aut nostrum quidem aliquid dicta.
-                                Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est
-                                cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis
-                                dolore.
+                                {!! $post->content !!}
                             </p>
 
                             <p>
@@ -318,7 +313,8 @@
                             </form>
                         </div><!-- End sidebar search formn-->
 
-                        <h3 class="sidebar-title">Categories</h3>
+                        @include('partials.categories')
+                        {{-- <h3 class="sidebar-title">Categories</h3>
                         <div class="sidebar-item categories">
                             <ul>
                                 <li><a href="#">General <span>(25)</span></a></li>
@@ -328,7 +324,7 @@
                                 <li><a href="#">Creative <span>(8)</span></a></li>
                                 <li><a href="#">Educaion <span>(14)</span></a></li>
                             </ul>
-                        </div><!-- End sidebar categories-->
+                        </div><!-- End sidebar categories--> --}}
 
                         <h3 class="sidebar-title">Recent Posts</h3>
                         <div class="sidebar-item recent-posts">

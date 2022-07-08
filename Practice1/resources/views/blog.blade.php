@@ -83,7 +83,8 @@
                             </form>
                         </div><!-- End sidebar search formn-->
 
-                        <h3 class="sidebar-title">Categories</h3>
+                        @include('partials.categories')
+                        {{-- <h3 class="sidebar-title">Categories</h3>
                         <div class="sidebar-item categories">
                             <ul>
                                 <li><a href="#">General <span>(25)</span></a></li>
@@ -93,7 +94,7 @@
                                 <li><a href="#">Creative <span>(8)</span></a></li>
                                 <li><a href="#">Educaion <span>(14)</span></a></li>
                             </ul>
-                        </div><!-- End sidebar categories-->
+                        </div><!-- End sidebar categories--> --}}
 
                         <h3 class="sidebar-title">Recent Posts</h3>
                         <div class="sidebar-item recent-posts">
