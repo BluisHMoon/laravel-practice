@@ -35,7 +35,7 @@
         </ul>
     </div>
     <div id="body">
-        @yield('content');
+        @yield('content')
     </div>
     <div id="footer">
         <div>

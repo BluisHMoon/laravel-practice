@@ -1,4 +1,4 @@
-@extends('layouts/site');
+@extends('layouts/site')
 
 @section('content')
 		<h1><span>{{ $subtitle }}</span></h1>
