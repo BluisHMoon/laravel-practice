@@ -19,7 +19,11 @@ use App\Http\Controllers\HomeController;
 //     return view('index')->with('title', '首頁')->with('copyright', '&copy; '. date("Y") .' by Mustacchio. All rights reserved.');
 // });
 
-Route::get('/', [HomeController::class, 'index']);
-Route::get('blog', [HomeController::class, 'blog']);
-Route::get('blog-single-post/{id}', [HomeController::class, 'blogSinglePost']);
-Route::get('about', [HomeController::class, 'about']);
+Route::get('/', [HomeController::class, 'renderIndex']);
+Route::get('blog', [HomeController::class, 'renderBlog']);
+Route::get('blog-single-post/{id}', [HomeController::class, 'renderBlogSinglePost']);
+Route::get('about', [HomeController::class, 'renderAbout']);
+Route::get('gallery', [HomeController::class, 'renderGallery']);
+Route::get('gallery-single-post/{id}', [HomeController::class, 'renderGallerySinglePost']);
+Route::get('contact', [HomeController::class, 'renderContact']);
+Route::post('contact/post', [HomeController::class, 'store']);

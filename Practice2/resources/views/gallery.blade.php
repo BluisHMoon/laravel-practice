@@ -1,52 +1,15 @@
 @extends('layouts/site');
 
-@section('content');
-    <h1><span>gallery</span></h1>
+@section('content')
+    ;
+    <h1><span>{{ $subtitle }}</span></h1>
     <ul class="gallery">
-        <li>
-            <a href="gallery-single-post.html">
-                <img src="images/mustache1.jpg" alt="">
-            </a>
-        </li>
-        <li>
-            <a href="gallery-single-post.html">
-                <img src="images/mustache2.jpg" alt="">
-            </a>
-        </li>
-        <li>
-            <a href="gallery-single-post.html">
-                <img src="images/mustache3.jpg" alt="">
-            </a>
-        </li>
-        <li>
-            <a href="gallery-single-post.html">
-                <img src="images/mustache4.jpg" alt="">
-            </a>
-        </li>
-        <li>
-            <a href="gallery-single-post.html">
-                <img src="images/mustache5.jpg" alt="">
-            </a>
-        </li>
-        <li>
-            <a href="gallery-single-post.html">
-                <img src="images/mustache6.jpg" alt="">
-            </a>
-        </li>
-        <li>
-            <a href="gallery-single-post.html">
-                <img src="images/mustache7.jpg" alt="">
-            </a>
-        </li>
-        <li>
-            <a href="gallery-single-post.html">
-                <img src="images/mustache8.jpg" alt="">
-            </a>
-        </li>
-        <li>
-            <a href="gallery-single-post.html">
-                <img src="images/mustache9.jpg" alt="">
-            </a>
-        </li>
+        @foreach ($galleries as $gallery)
+            <li>
+                <a href="{{ url('gallery-single-post/' . $gallery->id) }}">
+                    <img src="{{ $gallery->pic != 0 && $gallery->pic != null ? $gallery->pic : asset('images/mustache1.jpg') }}" alt="">
+                </a>
+            </li>
+        @endforeach
     </ul>
 @endsection

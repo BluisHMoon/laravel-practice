@@ -19,6 +19,7 @@ class GalleryFactory extends Factory
         return [
             //
             'title' => $this->faker->realText(30),
+            'content' => $this->faker->realText(100),
             'pic' => 'images/mustache'. rand(1, 9) . '.jpg',
             'published' => true,
             'sort' => rand(1, 9),
