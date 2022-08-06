@@ -1,32 +1,32 @@
        var options = [{
             option: "關於我們",
-            link: "about_us.html",
+            link: "about_us",
             dropdowm: "false",
 
         }, {
             option: "最新消息",
-            link: "news.html",
+            link: "news",
             dropdowm: "false",
         }, {
             option: "服務項目",
-            link: "service.html",
+            link: "service",
             dropdowm: "true",
             toggle: "dropdown",
             dropdowmOptions: [{
                 item: "項目_1",
-                link: "service_page.html"
+                link: "service_page"
             }, {
                 item: "項目_2",
-                link: "service_page.html"
+                link: "service_page"
             }, {
                 item: "項目_3",
-                link: "service_page.html"
+                link: "service_page"
             }]
 
 
         }, {
             option: "聯絡我們",
-            link: "contact.html",
+            link: "contact",
             dropdowm: "false",
         }]
 
@@ -37,12 +37,12 @@
             logo: "images/logo.svg",
             options: options
         }
-        
+
         var navbar = new Vue({
             el: "#navbar",
             data: companyDetail
         })
-        
+
           var footer = new Vue({
             el: "#footer",
             data: companyDetail
