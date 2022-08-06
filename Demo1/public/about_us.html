@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/sample_6.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/slider_3.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css'>
+    <link rel='stylesheet' href='css/slider_1.css'>
+
+</head>
+
+<body>
+    <nav id="navbar" class="navbar navbar-expand-lg  navbar-light sticky-top text-center">
+        <a class="navbar-brand" href="index.html"><img :src="logo" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown" v-for="option in options">
+                    <a class="nav-link" :href="option.link" :class="{'dropdown-toggle':option.dropdowm=='true'}" :data-toggle="option.toggle">{{option.option}}</a>
+                    <div class="dropdown-menu text-center" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" :href="dropdowmOption.link" v-for="dropdowmOption in option.dropdowmOptions">{{dropdowmOption.item}}</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="contect_phone">預約專線：{{phone}}</div>
+        </div>
+    </nav>
+    <div class="container-fluid page_banner">
+        <div class="banner_img"><img src="images/s-banner.jpg" alt=""></div>
+    </div>
+    <div class="container">
+        <ul class="nav nav-pills mb-3 justify-content-center " id="pills-tab" role="tablist">
+            <li class="nav-item ">
+                <a class="button-main" data-toggle="pill" href="#about_1">關於我們1</a>
+            </li>
+            <li class="nav-item">
+                <a class="button-main" data-toggle="pill" href="#about_2">關於我們2</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="about_1">
+                <div class="text-center page_about">
+                    <div class="title">
+                        <h2>AAAAAAAA</h2>
+                    </div>
+                    <hr class="hr_pink">
+
+                    <h5 class="text_cont text-left">
+                        一般人對於“看護”的印象多是提供長時間照護服務。但在許多情況下，人們會可能臨時需要短暫的專業照護服務。像是意外後被迫暫時休養，希望有照護人員輔助生活起居與陪同就醫。或是家庭照顧者想紓解照顧壓力，需要暫時的居家喘息服務。甚至是等待外籍看護交班的空窗期，迫切需要短時間的照顧服務員、看護前來照顧。「優照護」所提供的短期居家照護服務，即是因應這種急迫卻又短時間的照顧需求，讓有需求的家庭，能即時的找尋到合適且願意提供短期的照顧服務員、看護來進行照護服務。
+                        <br>
+                        <br>
+                        一般人對於“看護”的印象多是提供長時間照護服務。但在許多情況下，人們會可能臨時需要短暫的專業照護服務。像是意外後被迫暫時休養，希望有照護人員輔助生活起居與陪同就醫。或是家庭照顧者想紓解照顧壓力，需要暫時的居家喘息服務。甚至是等待外籍看護交班的空窗期，迫切需要短時間的照顧服務員、看護前來照顧。「優照護」所提供的短期居家照護服務，即是因應這種急迫卻又短時間的照顧需求，讓有需求的家庭，能即時的找尋到合適且願意提供短期的照顧服務員、看護來進行照護服務。
+                    </h5>
+                    <br><br><br><br>
+                    <div class="row">
+                        <img src="images/introduction_1.png" alt="" class="col-lg-4">
+                        <img src="images/introduction_2.png" alt="" class="col-lg-4">
+                        <img src="images/introduction_3.png" alt="" class="col-lg-4">
+                    </div>
+                    <br><br><br><br><br><br>
+                </div>
+            </div>
+
+
+            <div class="tab-pane fade" id="about_2">
+                <div class="text-center page_about">
+                    <div class="title">
+                        <h2>BBBBBBBB</h2>
+                    </div>
+                    <hr class="hr_pink">
+
+                    <h5 class="text_cont text-left">
+                        一般人對於“看護”的印象多是提供長時間照護服務。但在許多情況下，人們會可能臨時需要短暫的專業照護服務。像是意外後被迫暫時休養，希望有照護人員輔助生活起居與陪同就醫。或是家庭照顧者想紓解照顧壓力，需要暫時的居家喘息服務。甚至是等待外籍看護交班的空窗期，迫切需要短時間的照顧服務員、看護前來照顧。「優照護」所提供的短期居家照護服務，即是因應這種急迫卻又短時間的照顧需求，讓有需求的家庭，能即時的找尋到合適且願意提供短期的照顧服務員、看護來進行照護服務。
+                        <br>
+                        <br>
+                        一般人對於“看護”的印象多是提供長時間照護服務。但在許多情況下，人們會可能臨時需要短暫的專業照護服務。像是意外後被迫暫時休養，希望有照護人員輔助生活起居與陪同就醫。或是家庭照顧者想紓解照顧壓力，需要暫時的居家喘息服務。甚至是等待外籍看護交班的空窗期，迫切需要短時間的照顧服務員、看護前來照顧。「優照護」所提供的短期居家照護服務，即是因應這種急迫卻又短時間的照顧需求，讓有需求的家庭，能即時的找尋到合適且願意提供短期的照顧服務員、看護來進行照護服務。
+                    </h5>
+                    <br><br><br><br>
+                    <div class="row">
+                        <img src="images/introduction_1.png" alt="" class="col-lg-4">
+                        <img src="images/introduction_2.png" alt="" class="col-lg-4">
+                        <img src="images/introduction_3.png" alt="" class="col-lg-4">
+                    </div>
+                    <br><br><br><br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid ad_box">
+        <section class="variable slider carousel-center">
+            <img src="images/ad.png">
+            <img src="images/ad.png">
+            <img src="images/ad.png">
+            <img src="images/ad.png">
+            <img src="images/ad.png">
+              <img src="images/ad.png">
+        </section>
+    </div>
+
+    <div class="container-fluid footer text-center" id="footer">
+        <br>
+        <br>
+        <div style="font-weight: 900; color: white">
+            <img :src="logo" alt="">
+        </div>
+        <hr class="hr_white">
+        <div class="row justify-content-center">
+            <a :href="option.link" class="col-lg-1 col-3 footer_menu" v-for="option in options">
+                <div>{{option.option}}</div>
+            </a>
+        </div>
+        <br>
+        <br>
+        <div class="row contact  justify-content-center">
+            <div class="col-lg-4 col-12 text-left" data-0="transform: translateX(-200px)" data-bottom="transform: translateY(0px)">
+                <i class="fas fa-map-marker-alt"></i><span>{{address}}</span><br>
+                <i class="fas fa-mobile-alt"></i><span>{{phone}}</span><br>
+                <i class="fas fa-envelope"></i> <span>{{mail}}</span><br>
+
+
+            </div>
+            <div class="col-lg-4  col-12 message">
+                <input class="form-control" type="text" placeholder="姓名">
+                <input class="form-control" type="text" placeholder="電話">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="留言"></textarea>
+                <div class=" text-center page-padding">
+                    <a><button class="button-white" data-toggle="modal" data-target="#successful">立即預約</button></a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/Vue.v2.5.13.js"></script>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/skrollr.js"></script>
+    <script src="js/sample_6.js"></script>
+    <script src='js/slider_2.js'></script>
+    <script src='js/slider_1.js'></script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,38 @@
+
+    .slider {
+        width: 80%;
+        margin: auto;
+    }
+
+
+
+    .slick-slide img {
+      width: 100%;
+        padding: 10px;
+        cursor: pointer;
+        opacity: 0.8;
+        transition: .4s
+    }
+    .slick-slide img:hover {
+        opacity: 1
+    }
+
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: var(--ad_box_next);
+    }
+
+
+    .slick-slide {
+      transition: all ease-in-out .3s;
+      opacity: .2;
+    }
+    
+    .slick-active {
+      opacity: 1;
+    }
+
+    .slick-current {
+      opacity: 1;
+    }

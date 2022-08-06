@@ -1,0 +1,1 @@
+<?php include_once('../view/index_content.php'); ?>
